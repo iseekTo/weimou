@@ -15,7 +15,7 @@ if (module.hot) {
 
 function renderWithHotReload(Router) {
     ReactDOM.render(
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Router />
         </BrowserRouter>,
         document.getElementById('app')
