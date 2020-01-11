@@ -10,7 +10,7 @@
     "lint": "eslint --fix 'src/**/*.{js,ts,tsx}'",
     "deploy": "npm run build && gh-pages -d dist"
   },
-  "homepage": "https://iseekto.github.io/weimou",
+  "homepage": "https://iseekto.github.io/weimou/",
   "keywords": [
     "react",
     "react-router",
