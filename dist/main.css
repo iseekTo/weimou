@@ -15,7 +15,7 @@
   height: 100px;
 }
 
-body,ul,h1,h2,h3,h4,h5,h6,input {
+body,ul,h1,h2,h3,h4,h5,h6,p,input {
   margin: 0;
   padding: 0;
 }
@@ -24,6 +24,16 @@ body {
   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
   background: #fff;
   -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: #2d374b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cd0200;
+  text-decoration: underline;
 }
 
 li {
@@ -40,6 +50,12 @@ button {
   appearance: none;
   outline: none;
   -webkit-appearance: none;
+}
+
+p {
+  word-wrap: break-word;
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -68,12 +84,35 @@ ul ul {
   margin-bottom: 0;
 }
 
+a {
+  color: #1890ff;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #40a9ff;
+}
+
+a:active {
+  color: #096dd9;
+}
+
+a:active,a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
 img {
   vertical-align: middle;
   border-style: none;
 }
 
-button,[role='button'],input:not([type='range']) {
+a,button,[role='button'],input:not([type='range']) {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }

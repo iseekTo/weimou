@@ -8,10 +8,9 @@
     "dev": "webpack-dev-server --config ./build/webpack.dev.config.js --color --progress",
     "build": "webpack --config ./build/webpack.prod.config.js --color --progress",
     "lint": "eslint --fix 'src/**/*.{js,ts,tsx}'",
-    "deploy": "npm run build && gh-pages -d dist",
-    "git-gh": "npm run build && git subtree push --prefix=build origin gh-pages"
+    "deploy": "npm run build && gh-pages -d dist"
   },
-  "homepage": "https://iseekto.github.io/weimou/",
+  "homepage": "https://iseekto.github.io/weimou",
   "keywords": [
     "react",
     "react-router",
