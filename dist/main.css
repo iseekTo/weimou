@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'busong';
+  src: url(fonts/本墨钧宋-e2b14.min.ttf);
+}
+
+.home .h-txt {
+  margin-top: 20px;
+  font-family: 'busong';
+  color: red;
+  cursor: pointer;
+}
+
+.home img {
+  width: 100px;
+  height: 100px;
+}
+
+body,ul,h1,h2,h3,h4,h5,h6,input {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+button {
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, .85);
+  font-weight: 500;
+}
+
+address {
+  margin-bottom: 1em;
+  font-style: normal;
+  line-height: inherit;
+}
+
+input[type='text'],input[type='password'],input[type='number'] {
+  -webkit-appearance: none;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+ul ul {
+  margin-bottom: 0;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+button,[role='button'],input:not([type='range']) {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+button {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+button,input {
+  overflow: visible;
+}
+
+button {
+  text-transform: none;
+}
+
+[type='number']::-webkit-inner-spin-button,[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type='search'] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+
+[type='search']::-webkit-search-cancel-button,[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+/*# sourceMappingURL=main.css.map*/
