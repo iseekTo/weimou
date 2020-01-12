@@ -17,6 +17,11 @@ module.exports = merge(commonConfig, {
         chunkFilename: '[name].[contenthash].js'
     },
     devtool: 'cheap-module-source-map',
+    // 测试引入react cdn 然后再开启
+    // externals: {
+    //     'react': 'React',
+    //     'react-dom': 'ReactDOM'
+    // },
     optimization: {
         usedExports: true,
         splitChunks: {

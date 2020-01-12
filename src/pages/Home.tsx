@@ -4,7 +4,7 @@ import '../assets/home.scss'
 import '../assets/reset.scss'
 import time from '../assets/skill.jpeg'
 
-const Count = () => {
+const Home = () => {
     const history = useHistory()
 
     const jumpCount = () => {
@@ -57,4 +57,4 @@ const Count = () => {
     )
 }
 
-export default Count
+export default Home
