@@ -2,8 +2,10 @@ const path = require('path');
 const merge = require('webpack-merge');
 const PurifyCSS = require('purifycss-webpack');
 const glob = require('glob-all');
-const WorkboxPlugin = require('workbox-webpack-plugin'); // 引入 PWA 插件
+const WorkboxPlugin = require('workbox-webpack-plugin'); // unuse
 const commonConfig = require('./webpack.base.config.js');
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
+
 
 module.exports = merge(commonConfig, {
     mode: 'production',
@@ -37,10 +39,13 @@ module.exports = merge(commonConfig, {
                 path.resolve(__dirname, '..', 'src/**/*.tsx')
             ])
         }),
-        // PWA配置，生产环境才需要
-        new WorkboxPlugin.GenerateSW({
-            clientsClaim: true,
-            skipWaiting: true
+        // 开启 gzip
+        new CompressionWebpackPlugin({
+            filename: '[path].gz[query]',
+            algorithm: 'gzip',
+            test: new RegExp('\\.(js|css)$'),
+            threshold: 10240,
+            minRatio: 0.8
         })
     ]
 });
