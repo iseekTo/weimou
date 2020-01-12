@@ -1,12 +1,6 @@
 import ReactLoadable from 'react-loadable'
 import RouterLoadingComponent from '../components/RouterLoadingComponent'
 
-// import Home from '../pages/Home'
-// import Count from '../pages/Count'
-// import Lottery from '../pages/lottery'
-// import NotFound from '../pages/404'
-// import GetWeather from '../pages/GetWeather'
-
 const HomeLoadable = ReactLoadable({ loader: () => import('../pages/Home'), loading: RouterLoadingComponent })
 const CountLoadable = ReactLoadable({ loader: () => import('../pages/Count'), loading: RouterLoadingComponent })
 const LotteryLoadable = ReactLoadable({ loader: () => import('../pages/lottery'), loading: RouterLoadingComponent })
