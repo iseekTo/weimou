@@ -23,10 +23,6 @@ const Count = () => {
         history.push('/GetWeather')
     }
 
-    const jumpSlidingHook = () => {
-        history.push('/testSlidingHook')
-    }
-
     return (
         <div className='home'>
             <img
@@ -56,12 +52,6 @@ const Count = () => {
                 onClick={jumpGetWeather}
             >
                 go to GetWeatherPage
-            </h1>
-            <h1
-                className='h-txt'
-                onClick={jumpSlidingHook}
-            >
-                go to jumpSlidingHookPage
             </h1>
         </div>
     )
