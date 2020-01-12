@@ -2,6 +2,5 @@
 # ignore 
 
 dist
-jest.config.js
+build
 postcss.config.js
-setupTests.js
