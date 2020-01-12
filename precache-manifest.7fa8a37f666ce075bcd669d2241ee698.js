@@ -1,5 +1,9 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
+    "revision": "29930376cbf0e5e975b4bfdb1fefc600",
+    "url": "404.html"
+  },
+  {
     "revision": "e2b1476450aa575e3ed310b215a0ae99",
     "url": "fonts/本墨钧宋-e2b14.min.ttf"
   },
