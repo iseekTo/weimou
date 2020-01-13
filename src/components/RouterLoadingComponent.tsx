@@ -12,6 +12,7 @@ const RouterLoadingComponent: FC<loadingProps> = ({ isLoading, error }) => {
 
     NProgress.start()
     if (isLoading) {
+        // 持续优化，进度条不精确
         NProgress.done()
         return <div></div>;
     }
