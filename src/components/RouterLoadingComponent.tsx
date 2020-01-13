@@ -5,11 +5,15 @@ interface loadingProps {
     error?: string | any
 }
 
-const RouterLoadingComponent: FC<loadingProps> = ({ isLoading, error }) => {
-    
+// 简单声明第三方库 NProgress
+declare const NProgress: any;
 
+const RouterLoadingComponent: FC<loadingProps> = ({ isLoading, error }) => {
+
+    NProgress.start()
     if (isLoading) {
-        return <div>Loading...</div>;
+        NProgress.done()
+        return <div></div>;
     }
     else if (error) {
         console.log(error)
