@@ -21,16 +21,6 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  color: #2d374b;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #cd0200;
-  text-decoration: underline;
-}
-
 li {
   list-style: none;
 }
@@ -73,35 +63,12 @@ ul ul {
   margin-bottom: 0;
 }
 
-a {
-  color: #1890ff;
-  text-decoration: none;
-  background-color: transparent;
-  outline: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: #40a9ff;
-}
-
-a:active {
-  color: #096dd9;
-}
-
-a:active,a:hover {
-  text-decoration: none;
-  outline: 0;
-}
-
 img {
   vertical-align: middle;
   border-style: none;
 }
 
-a,button,[role='button'],input:not([type='range']) {
+button,[role='button'],input:not([type='range']) {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
