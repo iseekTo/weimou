@@ -6,12 +6,14 @@ interface loadingProps {
 }
 
 const RouterLoadingComponent: FC<loadingProps> = ({ isLoading, error }) => {
+    
+
     if (isLoading) {
         return <div>Loading...</div>;
     }
     else if (error) {
         console.log(error)
-        return <div>Sorry, there was a problem loading the page</div>;
+        return <div>抱歉，页面可能出现一些错误</div>;
     }
     else {
         return null;
