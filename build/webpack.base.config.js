@@ -14,7 +14,7 @@ module.exports = {
         path: path.resolve(__dirname, "../dist")
     },
     resolve: {
-        extensions: [".js", ".jsx", '.ts', '.tsx'],
+        extensions: [".js", ".jsx", '.ts', '.tsx', '.md'],
         alias: {
             "@": path.resolve(__dirname, "../src"),
             pages: path.resolve(__dirname, "../src/pages"),
@@ -31,6 +31,11 @@ module.exports = {
                         loader: "happypack/loader?id=happyBabel"
                     }
                 ]
+            },
+            {
+                test: /\.md$/,
+                exclude: /node_modules/,
+                use: "raw-loader"
             },
             {
                 test: /\.(sc|c)ss$/,
