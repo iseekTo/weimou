@@ -23,6 +23,7 @@ function reducer(state, action) {
 }
 
 const Count = ({ init }) => {
+
     const [count, setCount] = useState(0)
     const nameInput = useInput('')
     const [state, dispatch] = useReducer(reducer, init, initState)
@@ -43,6 +44,7 @@ const Count = ({ init }) => {
     useEffect(() => {
         nameInput.ref.current.focus()
     }, [nameInput.ref])
+
 
     return (
         <div>
