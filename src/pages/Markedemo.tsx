@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactMarkdown from 'react-markdown'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atelierCaveDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
@@ -15,13 +14,7 @@ const Markedemo = () => {
 
     return (
         <>
-            <ReactMarkdown
-                source={RNmd}
-                escapeHtml={false}
-                renderers={{
-                    "code": CodeBlock
-                }}
-            />
+            1111
         </>
     )
 }
