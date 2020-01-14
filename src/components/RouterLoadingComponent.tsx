@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 
 interface loadingProps {
     isLoading?: boolean
@@ -9,12 +9,15 @@ interface loadingProps {
 declare const NProgress: any;
 
 const RouterLoadingComponent: FC<loadingProps> = ({ isLoading, error }) => {
+   
+    useEffect(() => {
+        NProgress.start()
 
-    NProgress.start()
+        return () => NProgress.done()
+    }, [])
+
     if (isLoading) {
-        // 持续优化，进度条不精确
-        NProgress.done()
-        return <div></div>;
+        return <div>loading...</div>;
     }
     else if (error) {
         console.log(error)
@@ -23,6 +26,7 @@ const RouterLoadingComponent: FC<loadingProps> = ({ isLoading, error }) => {
     else {
         return null;
     }
+
 };
 
 export default RouterLoadingComponent
