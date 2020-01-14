@@ -6,12 +6,14 @@ const CountLoadable = ReactLoadable({ loader: () => import('../pages/Count'), lo
 const LotteryLoadable = ReactLoadable({ loader: () => import('../pages/lottery'), loading: RouterLoadingComponent })
 const GetWeatherLoadable = ReactLoadable({ loader: () => import('../pages/GetWeather'), loading: RouterLoadingComponent })
 const NotFoundLoadable = ReactLoadable({ loader: () => import('../pages/404'), loading: RouterLoadingComponent })
+const Markedemo = ReactLoadable({ loader: () => import('../pages/Markedemo'), loading: RouterLoadingComponent })
 
 const routes = [
     { path: '/', component: HomeLoadable, exact: true },
     { path: '/count', component: CountLoadable, exact: true },
     { path: '/lottery', component: LotteryLoadable, exact: true },
     { path: '/GetWeather', component: GetWeatherLoadable, exact: true },
+    { path: '/Markedemo', component: Markedemo, exact: true },
 
     { path: '/NotFound', component: NotFoundLoadable, exact: true }
 

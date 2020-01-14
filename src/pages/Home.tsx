@@ -23,6 +23,10 @@ const Home = () => {
         history.push('/GetWeather')
     }
 
+    const jumpMarkedemo = () => {
+        history.push('/Markedemo')
+    }
+
     return (
         <div className='home'>
             <img
@@ -52,6 +56,12 @@ const Home = () => {
                 onClick={jumpGetWeather}
             >
                 go to GetWeatherPage
+            </h1>
+            <h1
+                className='h-txt'
+                onClick={jumpMarkedemo}
+            >
+                go to Markedemo
             </h1>
         </div>
     )
