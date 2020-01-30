@@ -4,27 +4,19 @@ import '../assets/home.scss'
 import '../assets/reset.scss'
 import time from '../assets/skill.jpeg'
 
+const jumpRouteName: string[] = [
+    'count',
+    'lottery',
+    '404',
+    'GetWeather'
+]
+
 const Home = () => {
     const history = useHistory()
 
-    const jumpCount = () => {
-        history.push('/count')
-    }
 
-    const jumpLottery = () => {
-        history.push('/lottery')
-    }
-
-    const jumpAnthing = () => {
-        history.push('/hhahahhah')
-    }
-
-    const jumpGetWeather = () => {
-        history.push('/GetWeather')
-    }
-
-    const jumpMarkedemo = () => {
-        history.push('/Markedemo')
+    const onJumpClick = (route) => {
+        history.push(`/${route}`)
     }
 
     return (
@@ -33,36 +25,19 @@ const Home = () => {
                 src={time}
                 alt='111'
             />
-            <h1
-                className='h-txt'
-                onClick={jumpCount}
-            >
-                go to countPage
-            </h1>
-            <h1
-                className='h-txt'
-                onClick={jumpLottery}
-            >
-                go to lotteryPage
-            </h1>
-            <h1
-                className='h-txt'
-                onClick={jumpAnthing}
-            >
-                go to anthingPage
-            </h1>
-            <h1
-                className='h-txt'
-                onClick={jumpGetWeather}
-            >
-                go to GetWeatherPage
-            </h1>
-            <h1
-                className='h-txt'
-                onClick={jumpMarkedemo}
-            >
-                go to Markedemo
-            </h1>
+
+            {
+                jumpRouteName.map((route: string) => (
+                    <h1
+                        key={route}
+                        className='h-txt'
+                        onClick={() => onJumpClick(route)}
+                    >
+                        go to {route}Page
+                    </h1>
+                ))
+            }
+            
         </div>
     )
 }

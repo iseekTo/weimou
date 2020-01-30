@@ -2,7 +2,6 @@ const path = require('path');
 const merge = require('webpack-merge');
 const PurifyCSS = require('purifycss-webpack');
 const glob = require('glob-all');
-const WorkboxPlugin = require('workbox-webpack-plugin'); // unuse
 const commonConfig = require('./webpack.base.config.js');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
