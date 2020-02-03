@@ -3,6 +3,8 @@
  * 
  */
 import React, { FC, useState, memo, useEffect } from 'react'
+import usePreviousValue from '../components/usePreviousValue'
+
 
 type ButtonProps = {
     color: string
@@ -30,6 +32,7 @@ const Button: FC<ButtonProps> = memo( ({ color }) => {
 
 const NotFound = () => {
     const [val, setVal] = useState<number>(0)
+    const nextValue = usePreviousValue(val)
 
     return (
         <>
@@ -37,7 +40,8 @@ const NotFound = () => {
             
             404！找不到此页面！
         </h1>
-        <h3>{val}</h3>
+        <h3>currentValue:   {val}</h3>
+        <h3>previousValue: {nextValue}</h3>
         <button onClick={() => setVal(n => n + 1)}>click me to plus</button>
         <Button color='red' />
         </>
