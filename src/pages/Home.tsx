@@ -14,8 +14,7 @@ const jumpRouteName: string[] = [
 const Home = () => {
     const history = useHistory()
 
-
-    const onJumpClick = (route) => {
+    const onJumpClick = route => {
         history.push(`/${route}`)
     }
 
@@ -37,7 +36,7 @@ const Home = () => {
                     </h1>
                 ))
             }
-            
+
         </div>
     )
 }
